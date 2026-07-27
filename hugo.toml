@@ -1,4 +1,4 @@
-baseURL = "https://github.io"
+baseURL = "https://github.com/adrienraffy-beep/hugo.github.io"
 languageCode = "fr-fr"
 title = "Mon Canard Blog"
 theme = "minimal-pc"

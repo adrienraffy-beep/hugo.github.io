@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <header>
+    <a href="{{ .Site.BaseURL }}" style="font-family:'Oswald'; font-size:2rem; text-decoration:none; color:#000;">{{ .Site.Title }}</a>
+    <hr style="border: 1px solid #000;">
+  </header>
+  <main>
+    <h1>{{ .Title }}</h1>
+    <p style="font-style: italic; color: #666;">Publié par {{ .Params.author }} le {{ .Date.Format "02/01/2006" }}</p>
+    <article>
+      {{ .Content }}
+    </article>
+  </main>
+</body>
+</html>

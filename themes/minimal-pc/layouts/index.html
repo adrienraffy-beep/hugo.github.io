@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <header>
+    <h1 style="font-family:'Oswald'; font-size:3.5rem; text-align:center; margin-bottom:5px;">{{ .Site.Title }}</h1>
+    <p style="text-align:center; font-style:italic; margin-top:0; font-size:1.1rem;">{{ .Site.Params.description }}</p>
+    <hr style="border: 2px solid #000; margin-bottom: 30px;">
+  </header>
+
+  <main>
+    <h2 style="border-bottom: 3px solid #000; padding-bottom: 5px; margin-bottom: 20px;">À LA UNE</h2>
+    
+    <!-- Liste des articles style journal dense -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+      {{ range (where .Site.RegularPages "Section" "posts") }}
+      <article style="border: 1px solid #ddd; padding: 15px; background: #fff;">
+        <h3 style="font-size: 1.5rem; margin-top: 0; border: none; padding: 0;">
+          <a href="{{ .Permalink }}" style="color: #000; text-decoration: none;">{{ .Title }}</a>
+        </h3>
+        <p style="font-size: 0.9rem; color: #666; margin: 5px 0;">Le {{ .Date.Format "02/01/2006" }}</p>
+        <p style="font-size: 0.95rem;">{{ .Summary | truncate 150 }}</p>
+        <a href="{{ .Permalink }}" style="font-family: 'Oswald'; color: #ff0000; text-decoration: none; font-size: 0.9rem;">LIRE LE TEST →</a>
+      </article>
+      {{ end }}
+    </div>
+  </main>
+</body>
+</html>

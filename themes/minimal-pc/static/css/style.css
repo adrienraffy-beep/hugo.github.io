@@ -148,4 +148,18 @@ h1, h2, h3 {
   .verdict-listes { flex-direction: column; }
 }
 
+/* Stylisation automatique de la toute première lettre du premier paragraphe */
+article > p:first-of-type::first-letter {
+  font-family: 'Oswald', sans-serif; /* On reprend la police grasse des titres */
+  font-size: 4.2rem;                 /* Taille géante */
+  font-weight: bold;
+  float: left;                       /* Permet au texte de s'enrouler autour de la lettre */
+  line-height: 0.85;                 /* Aligne le haut de la lettre avec le haut du texte */
+  margin-top: 6px;
+  margin-right: 10px;                /* Espace entre la lettre et le début du texte */
+  padding: 4px 8px;
+  background-color: #000000;         /* Fond noir style bloc brut */
+  color: #FFFFFF;                    /* Lettre blanche pour un contraste maximal */
+  text-transform: uppercase;
+}
 

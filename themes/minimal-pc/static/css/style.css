@@ -149,7 +149,8 @@ h1, h2, h3 {
 }
 
 /* Stylisation automatique de la toute première lettre du premier paragraphe */
-article > p:first-of-type::first-letter {
+/* La lettrine ne cible désormais QUE le vrai texte de l'article complet */
+.page-article > p:first-of-type::first-letter {
   font-family: 'Oswald', sans-serif; /* On reprend la police grasse des titres */
   font-size: 4.2rem;                 /* Taille géante */
   font-weight: bold;

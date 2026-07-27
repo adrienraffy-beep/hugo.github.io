@@ -1,0 +1,22 @@
+<div class="bloc-verdict">
+  <div class="verdict-contenu">
+    <h3 class="verdict-titre">Le Verdict</h3>
+    <p class="verdict-resume"><strong>En bref :</strong> {{ .Get "resume" }}</p>
+    
+    <div class="verdict-listes">
+      <div class="liste-points plus">
+        <h4>Les Plus</h4>
+        {{ .Get "plus" | markdownify }}
+      </div>
+      <div class="liste-points moins">
+        <h4>Les Moins</h4>
+        {{ .Get "moins" | markdownify }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="verdict-note-badge">
+    <span class="note-chiffre">{{ .Get "note" }}</span>
+    <span class="note-sur-dix">/10</span>
+  </div>
+</div>

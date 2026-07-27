@@ -1,0 +1,7 @@
+baseURL = "https://github.io"
+languageCode = "fr-fr"
+title = "Mon Canard Blog"
+theme = "minimal-pc"
+
+[params]
+  description = "Critiques acerbes et analyses techniques."

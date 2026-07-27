@@ -13,7 +13,7 @@
   <main>
     <h1>{{ .Title }}</h1>
     <p style="font-style: italic; color: #666;">Publié par {{ .Params.author }} le {{ .Date.Format "02/01/2006" }}</p>
-    <article>
+    <article class="page-article">
       {{ .Content }}
     </article>
   </main>
